@@ -7,12 +7,13 @@
 //  response.send('Hello World 2!');
 //});
 
-//var port = process.env.PORT || 5000;
-//app.listen(port, function() {
-//  console.log("Listening on " + port);
-//});
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
 
-var content;
+//var content;
+
 // First I want to read the file
 var fs = require('fs');
 
