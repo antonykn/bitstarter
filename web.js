@@ -14,7 +14,9 @@
 
 var content;
 // First I want to read the file
-fs.readFile('./index.html', function read(err, data) {
+var fs =require('fs');
+
+fs.readFileSync('index.html', function read(err, data) {
     if (err) {
         throw err;
     }
