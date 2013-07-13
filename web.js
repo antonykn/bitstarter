@@ -3,20 +3,14 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
+    // set up file system;
+    var fs = require('fs'); 
 
-  response.send('Hello World 2!');
+    // read index.html into buffer;  
+    var buffer = new Buffer(fs.readFileSync('index.html'),'utf-8');
+    response.send(buffer.toString());
 });
 
 var port = process.env.PORT || 5000;
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
-
-//var content;
-
-// First I want to read the file
-var fs = require('fs');
-
-
-var data = fs.readFileSync('index.html', {encoding: 'utf8'});
-console.log(data);
+app.listen( console.log("Listening on " + port);
+});port, function() {
